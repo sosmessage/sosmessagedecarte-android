@@ -15,12 +15,13 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
 public abstract class SosActivity extends Activity {
 
 	private static final String SERVER_URL = "http://sosmessage.arnk.fr";
-	private static final Pattern MESSAGE_EXTRACTOR = Pattern.compile(".*\"text\":\"(.*?)\".*",
-			Pattern.DOTALL);
 
 	private static final String ERROR_MESSAGE = "Ooops ! Il semblerait qu'il soit impossible de récuper des messages.\nPeut-être pourriez-vous réessayer plus tard.";
 
@@ -29,7 +30,6 @@ public abstract class SosActivity extends Activity {
 		alertDialog.setMessage(message);
 		alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
-				return;
 			}
 		});
 		alertDialog.show();
@@ -44,9 +44,8 @@ public abstract class SosActivity extends Activity {
 				ByteArrayOutputStream out = new ByteArrayOutputStream();
 				response.getEntity().writeTo(out);
 				out.close();
-				Matcher matcher = MESSAGE_EXTRACTOR.matcher(out.toString());
-				matcher.matches();
-				return matcher.group(1);
+                JSONObject object = (JSONObject) new JSONTokener(out.toString()).nextValue();
+				return object.getString("text");
 			} else {
 				alert(ERROR_MESSAGE);
 				return "HTTP status code " + statusLine.getStatusCode();
@@ -57,18 +56,8 @@ public abstract class SosActivity extends Activity {
 		} catch (IOException e) {
 			alert(ERROR_MESSAGE);
 			return e.getMessage();
-		}
-
-		// return
-		// "It is a long established fact that a reader will be distracted by the readable content of a page"
-		// +
-		// " when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as"
-		// +
-		// " opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page"
-		// +
-		// " editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their"
-		// +
-		// " infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose "
-		// + "(injected humour and the like).";
+		} catch (JSONException e) {
+            return e.getMessage();
+        }
 	}
 }
