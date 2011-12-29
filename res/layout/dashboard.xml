@@ -18,23 +18,23 @@
     android:orientation="vertical" >
 		<TextView android:id="@+id/textAnniv" style="@style/category"
 	          android:text="@string/birthday_category"
-	          android:background="#dbe2e3"/>
+	          android:background="@color/birthday"/>
 
 		<TextView android:id="@+id/textPot" style="@style/category"
 		      android:text="@string/leaving_party_category"
-	          android:background="#eef4d7"/>
+	          android:background="@color/leaving_party"/>
 
       	<TextView android:id="@+id/textVoeux" style="@style/category"
       	      android:text="@string/wish_category"
-	          android:background="#fff6d5"/>
+	          android:background="@color/wish"/>
       	
       	<TextView android:id="@+id/textValentin" style="@style/category"
       	      android:text="@string/valentine_s_day_category"
-	          android:background="#ffd5d5"/>
+	          android:background="@color/valentine_s_day"/>
       	
-      	<TextView android:id="@+id/textRupture" style="@style/category"
+      	<TextView android:id="@+id/textBreakUp" style="@style/category"
       	   	  android:text="@string/break_up_category"
-	          android:background="#dbe2e3"/>
+	          android:background="@color/break_up"/>
 	</LinearLayout>
 
 </LinearLayout>

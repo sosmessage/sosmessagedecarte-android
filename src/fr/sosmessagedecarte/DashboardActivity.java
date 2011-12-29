@@ -46,7 +46,7 @@ public class DashboardActivity extends Activity {
 		TextView valentin = (TextView) findViewById(R.id.textValentin);
 		valentin.setTypeface(tf);
 
-		TextView rupture = (TextView) findViewById(R.id.textRupture);
+		TextView rupture = (TextView) findViewById(R.id.textBreakUp);
 		rupture.setTypeface(tf);
 
 	}

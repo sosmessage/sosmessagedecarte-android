@@ -2,8 +2,6 @@ package fr.sosmessagedecarte;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -11,19 +9,26 @@ import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONTokener;
+import android.os.Bundle;
 
 public abstract class SosActivity extends Activity {
 
 	private static final String SERVER_URL = "http://sosmessage.arnk.fr";
 
 	private static final String ERROR_MESSAGE = "Ooops ! Il semblerait qu'il soit impossible de récuper des messages.\nPeut-être pourriez-vous réessayer plus tard.";
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+	}
 
 	protected void alert(String message) {
 		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
@@ -44,7 +49,7 @@ public abstract class SosActivity extends Activity {
 				ByteArrayOutputStream out = new ByteArrayOutputStream();
 				response.getEntity().writeTo(out);
 				out.close();
-                JSONObject object = (JSONObject) new JSONTokener(out.toString()).nextValue();
+				JSONObject object = (JSONObject) new JSONTokener(out.toString()).nextValue();
 				return object.getString("text");
 			} else {
 				alert(ERROR_MESSAGE);
@@ -57,7 +62,7 @@ public abstract class SosActivity extends Activity {
 			alert(ERROR_MESSAGE);
 			return e.getMessage();
 		} catch (JSONException e) {
-            return e.getMessage();
-        }
+			return e.getMessage();
+		}
 	}
 }

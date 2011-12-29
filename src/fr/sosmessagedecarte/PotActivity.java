@@ -18,7 +18,7 @@ public class PotActivity extends SosActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.pot);
 
-		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Bodoni SvtyTwo OS ITC TT.dfont");
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Georgia.ttf");
 		text = (TextView) findViewById(R.id.text);
 		text.setMovementMethod(ScrollingMovementMethod.getInstance());
 		text.setTypeface(tf);
