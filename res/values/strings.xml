@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="mock_mariage">Que ce grand jour marque le début d\'une suite ininterrompue de moments heureux dont vous ferez partage tous les deux.\n\nFélicitations!</string>
-    <string name="mock_remerciement">Les mots me manquent pour exprimer combien ta gentillesse me touche.\n\nMerci.</string>
-    <string name="mock_pot">Mais tu faisais quoi en fait, j\’ai jamais compris.</string>
-    <string name="mock_anniv">Une pensée bien spéciale pour l\'anniversaire d\'une personne exceptionnelle qui fête son anniversaire.\nJoyeux anniversaire.</string>
     <string name="app_name">Sosmessagedecarte</string>
+    
     <string name="button_text">SOS\nautre message</string>
+    
+    <string name="birthday_category">d\'anniversaire</string>
+    <string name="leaving_party_category">de pot de départ</string>
+    <string name="wish_category">de voeux</string>
+    <string name="valentine_s_day_category">de Saint-Valentin</string>
+    <string name="break_up_category">de rupture</string>
 
 </resources>

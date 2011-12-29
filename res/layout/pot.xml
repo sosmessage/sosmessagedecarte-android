@@ -6,20 +6,8 @@
 	android:background="#eef4d7"
     android:orientation="vertical" >
 
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
-    
-	    <ImageView android:id="@+acountcreation/title"
-	    	android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="10dp"
-			android:layout_marginRight="10dp"
-			android:layout_marginBottom="30dp"
-			android:layout_gravity="right"
-			android:src="@drawable/logo_pot" />
-	</LinearLayout>
+	<ImageView android:id="@+acountcreation/title" style="@style/logo"
+		android:src="@drawable/logo_pot" />
  
  	<RelativeLayout 
         android:id="@+id/InnerRelativeLayout"
@@ -36,8 +24,7 @@
 			android:singleLine="false"
 			android:maxLines="15"
 			android:scrollbars="vertical"
-			android:layout_centerHorizontal="true"
-			android:text="@string/mock_pot" />
+			android:layout_centerHorizontal="true"/>
 		
 	    <Button android:id="@+id/myButton"
 	        android:layout_width="wrap_content"

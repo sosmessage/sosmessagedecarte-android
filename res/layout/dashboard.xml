@@ -6,20 +6,8 @@
 	android:background="#ccc"
     android:orientation="vertical" >
     
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
-    
-	    <ImageView android:id="@+acountcreation/title"
-	    	android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="10dp"
-			android:layout_marginRight="10dp"
-			android:layout_marginBottom="30dp"
-			android:layout_gravity="right"
-			android:src="@drawable/logo_dashboard" />
-	</LinearLayout>
+	<ImageView android:id="@+acountcreation/title" style="@style/logo"
+		android:src="@drawable/logo_dashboard" />
 	
    <LinearLayout 
     android:layout_width="fill_parent"
@@ -28,60 +16,25 @@
 	android:layout_marginLeft="10dp"
 	android:layout_marginBottom="10dp"
     android:orientation="vertical" >
-		<TextView android:id="@+id/textAnniv"
-	          android:text="d'anniversaire"
-	          android:layout_marginBottom="10dp"
-	          android:background="#dbe2e3"
-	          android:textSize="26sp"
-	          android:textColor="#000000"
-	          android:gravity="center_vertical|center_horizontal"
-	          android:layout_width="fill_parent"
-	          android:layout_height="fill_parent"
-	          android:layout_weight="1"/>
+		<TextView android:id="@+id/textAnniv" style="@style/category"
+	          android:text="@string/birthday_category"
+	          android:background="#dbe2e3"/>
 
-		<TextView android:id="@+id/textPot"
-	          android:text="de pot de départ"
-	          android:layout_marginBottom="10dp"
-	          android:background="#eef4d7"
-	          android:textSize="26sp"
-	          android:textColor="#000000"
-	          android:gravity="center_vertical|center_horizontal"
-	          android:layout_width="fill_parent"
-	          android:layout_height="fill_parent"
-	          android:layout_weight="1"/>
+		<TextView android:id="@+id/textPot" style="@style/category"
+		      android:text="@string/leaving_party_category"
+	          android:background="#eef4d7"/>
 
-      	<TextView android:id="@+id/textVoeux"
-	          android:text="de voeux"
-	          android:layout_marginBottom="10dp"
-	          android:background="#fff6d5"
-	          android:textSize="26sp"
-	          android:textColor="#000000"
-	          android:gravity="center_vertical|center_horizontal"
-	          android:layout_width="fill_parent"
-	          android:layout_height="fill_parent"
-	          android:layout_weight="1"/>
+      	<TextView android:id="@+id/textVoeux" style="@style/category"
+      	      android:text="@string/wish_category"
+	          android:background="#fff6d5"/>
       	
-      	<TextView android:id="@+id/textValentin"
-	          android:text="de Saint-Valentin"
-	          android:layout_marginBottom="10dp"
-	          android:background="#ffd5d5"
-	          android:textSize="26sp"
-	          android:textColor="#000000"
-	          android:gravity="center_vertical|center_horizontal"
-	          android:layout_width="fill_parent"
-	          android:layout_height="fill_parent"
-	          android:layout_weight="1"/>
+      	<TextView android:id="@+id/textValentin" style="@style/category"
+      	      android:text="@string/valentine_s_day_category"
+	          android:background="#ffd5d5"/>
       	
-      	<TextView android:id="@+id/textRupture"
-	          android:text="de rupture"
-	          android:layout_marginBottom="10dp"
-	          android:background="#dbe2e3"
-	          android:textSize="26sp"
-	          android:textColor="#000000"
-	          android:gravity="center_vertical|center_horizontal"
-	          android:layout_width="fill_parent"
-	          android:layout_height="fill_parent"
-	          android:layout_weight="1"/>
+      	<TextView android:id="@+id/textRupture" style="@style/category"
+      	   	  android:text="@string/break_up_category"
+	          android:background="#dbe2e3"/>
 	</LinearLayout>
 
 </LinearLayout>
