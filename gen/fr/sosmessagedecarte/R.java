@@ -31,6 +31,9 @@ public final class R {
         public static final int InnerRelativeLayout=0x7f070000;
         public static final int myButton=0x7f070002;
         public static final int text=0x7f070001;
+        public static final int textAnniv=0x7f070003;
+        public static final int textPot=0x7f070004;
+        public static final int textVoeux=0x7f070005;
     }
     public static final class layout {
         public static final int anniv=0x7f030000;
