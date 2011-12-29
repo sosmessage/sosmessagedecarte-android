@@ -26,11 +26,12 @@
     android:layout_height="fill_parent"
 	android:layout_marginRight="10dp"
 	android:layout_marginLeft="10dp"
-	android:layout_marginBottom="30dp"
+	android:layout_marginBottom="10dp"
     android:orientation="vertical" >
 		<TextView android:id="@+id/textAnniv"
-	          android:text="Anniversaire"
-	          android:background="#ffd5d5"
+	          android:text="d'anniversaire"
+	          android:layout_marginBottom="10dp"
+	          android:background="#dbe2e3"
 	          android:textSize="26sp"
 	          android:textColor="#000000"
 	          android:gravity="center_vertical|center_horizontal"
@@ -39,7 +40,8 @@
 	          android:layout_weight="1"/>
 
 		<TextView android:id="@+id/textPot"
-	          android:text="Pot de départ"
+	          android:text="de pot de départ"
+	          android:layout_marginBottom="10dp"
 	          android:background="#eef4d7"
 	          android:textSize="26sp"
 	          android:textColor="#000000"
@@ -49,8 +51,31 @@
 	          android:layout_weight="1"/>
 
       	<TextView android:id="@+id/textVoeux"
-	          android:text="Voeux"
+	          android:text="de voeux"
+	          android:layout_marginBottom="10dp"
 	          android:background="#fff6d5"
+	          android:textSize="26sp"
+	          android:textColor="#000000"
+	          android:gravity="center_vertical|center_horizontal"
+	          android:layout_width="fill_parent"
+	          android:layout_height="fill_parent"
+	          android:layout_weight="1"/>
+      	
+      	<TextView android:id="@+id/textValentin"
+	          android:text="de Saint-Valentin"
+	          android:layout_marginBottom="10dp"
+	          android:background="#ffd5d5"
+	          android:textSize="26sp"
+	          android:textColor="#000000"
+	          android:gravity="center_vertical|center_horizontal"
+	          android:layout_width="fill_parent"
+	          android:layout_height="fill_parent"
+	          android:layout_weight="1"/>
+      	
+      	<TextView android:id="@+id/textRupture"
+	          android:text="de rupture"
+	          android:layout_marginBottom="10dp"
+	          android:background="#dbe2e3"
 	          android:textSize="26sp"
 	          android:textColor="#000000"
 	          android:gravity="center_vertical|center_horizontal"

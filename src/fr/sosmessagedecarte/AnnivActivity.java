@@ -18,7 +18,7 @@ public class AnnivActivity extends SosActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.anniv);
 
-		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Bodoni SvtyTwo OS ITC TT.dfont");
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Georgia.ttf");
 		text = (TextView) findViewById(R.id.text);
 		text.setMovementMethod(ScrollingMovementMethod.getInstance());
 		text.setTypeface(tf);
