@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-	android:background="#e95c4f"
+	android:background="#ffd5d5"
     android:orientation="vertical" >
 
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

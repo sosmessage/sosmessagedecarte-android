@@ -3,37 +3,60 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-	android:background="#72c1bf"
+	android:background="#ccc"
     android:orientation="vertical" >
     
-	<TextView android:id="@+id/textAnniv"
-          android:text="Anniversaire"
-          android:background="#ffd5d5"
-          android:textSize="26sp"
-          android:textColor="#000000"
-          android:gravity="center_vertical|center_horizontal"
-          android:layout_width="fill_parent"
-          android:layout_height="fill_parent"
-          android:layout_weight="1"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+	    <ImageView android:id="@+acountcreation/title"
+	    	android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="30dp"
+			android:layout_gravity="right"
+			android:src="@drawable/logo_dashboard" />
+	</LinearLayout>
 	
-      <TextView android:id="@+id/textPot"
-          android:text="Pot de départ"
-          android:background="#eef4d7"
-          android:textSize="26sp"
-          android:textColor="#000000"
-          android:gravity="center_vertical|center_horizontal"
-          android:layout_width="fill_parent"
-          android:layout_height="fill_parent"
-          android:layout_weight="1"/>
-      
-      <TextView android:id="@+id/textVoeux"
-          android:text="Voeux"
-          android:background="#fff6d5"
-          android:textSize="26sp"
-          android:textColor="#000000"
-          android:gravity="center_vertical|center_horizontal"
-          android:layout_width="fill_parent"
-          android:layout_height="fill_parent"
-          android:layout_weight="1"/>
+   <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:layout_marginRight="10dp"
+	android:layout_marginLeft="10dp"
+	android:layout_marginBottom="30dp"
+    android:orientation="vertical" >
+		<TextView android:id="@+id/textAnniv"
+	          android:text="Anniversaire"
+	          android:background="#ffd5d5"
+	          android:textSize="26sp"
+	          android:textColor="#000000"
+	          android:gravity="center_vertical|center_horizontal"
+	          android:layout_width="fill_parent"
+	          android:layout_height="fill_parent"
+	          android:layout_weight="1"/>
+
+		<TextView android:id="@+id/textPot"
+	          android:text="Pot de départ"
+	          android:background="#eef4d7"
+	          android:textSize="26sp"
+	          android:textColor="#000000"
+	          android:gravity="center_vertical|center_horizontal"
+	          android:layout_width="fill_parent"
+	          android:layout_height="fill_parent"
+	          android:layout_weight="1"/>
+
+      	<TextView android:id="@+id/textVoeux"
+	          android:text="Voeux"
+	          android:background="#fff6d5"
+	          android:textSize="26sp"
+	          android:textColor="#000000"
+	          android:gravity="center_vertical|center_horizontal"
+	          android:layout_width="fill_parent"
+	          android:layout_height="fill_parent"
+	          android:layout_weight="1"/>
+	</LinearLayout>
 
 </LinearLayout>
