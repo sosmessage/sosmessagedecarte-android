@@ -21,13 +21,11 @@ import android.os.Bundle;
 public abstract class SosActivity extends Activity {
 
 	private static final String SERVER_URL = "http://sosmessage.arnk.fr";
-
 	private static final String ERROR_MESSAGE = "Ooops ! Il semblerait qu'il soit impossible de récuper des messages.\nPeut-être pourriez-vous réessayer plus tard.";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 	}
 
 	protected void alert(String message) {

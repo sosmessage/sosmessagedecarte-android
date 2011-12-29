@@ -23,16 +23,10 @@ public final class R {
     public static final class drawable {
         public static final int handmadepaper=0x7f020000;
         public static final int ic_launcher=0x7f020001;
-        public static final int ic_tab_artists=0x7f020002;
-        public static final int ic_tab_artists_grey=0x7f020003;
-        public static final int ic_tab_artists_white=0x7f020004;
-        public static final int logo=0x7f020005;
-        public static final int logo_anniv=0x7f020006;
-        public static final int logo_dashboard=0x7f020007;
-        public static final int logo_pot=0x7f020008;
-        public static final int logo_remerciement=0x7f020009;
-        public static final int old2_ic_launcher=0x7f02000a;
-        public static final int old_ic_launcher=0x7f02000b;
+        public static final int logo_anniv=0x7f020002;
+        public static final int logo_dashboard=0x7f020003;
+        public static final int logo_pot=0x7f020004;
+        public static final int logo_voeux=0x7f020005;
     }
     public static final class id {
         public static final int InnerRelativeLayout=0x7f070009;

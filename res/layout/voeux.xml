@@ -4,7 +4,7 @@
 	android:background="@color/wish">
 
 	<ImageView android:id="@+acountcreation/title" style="@style/logo"
-		android:src="@drawable/logo_remerciement" />
+		android:src="@drawable/logo_voeux" />
  
  	<RelativeLayout android:id="@+id/InnerRelativeLayout">
 	    <TextView android:id="@+id/text" style="@style/message"	/>
