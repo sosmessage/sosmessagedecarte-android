@@ -9,27 +9,36 @@
    <LinearLayout 
 	android:layout_marginRight="10dp"
 	android:layout_marginLeft="10dp"
-	android:layout_marginBottom="10dp"
-    android:orientation="vertical" >
+	android:layout_marginBottom="10dp" >
+		<LinearLayout android:layout_weight="1" android:background="@drawable/texture2" android:layout_marginBottom="10dp">
 		<TextView android:id="@+id/textAnniv" style="@style/category"
 	          android:text="@string/birthday_category"
-	          android:background="@color/birthday"/>
-
+	          android:background="@color/birthday_alpha"/>
+		</LinearLayout>
+		
+		<LinearLayout android:layout_weight="1" android:background="@drawable/texture2" android:layout_marginBottom="10dp">
 		<TextView android:id="@+id/textPot" style="@style/category"
 		      android:text="@string/leaving_party_category"
-	          android:background="@color/leaving_party"/>
-
+	          android:background="@color/leaving_party_alpha"/>
+		</LinearLayout>
+		
+		<LinearLayout android:layout_weight="1" android:background="@drawable/texture2" android:layout_marginBottom="10dp">
       	<TextView android:id="@+id/textVoeux" style="@style/category"
       	      android:text="@string/wish_category"
-	          android:background="@color/wish"/>
+	          android:background="@color/wish_alpha"/>
+      	</LinearLayout>
       	
+      	<LinearLayout android:layout_weight="1" android:background="@drawable/texture2" android:layout_marginBottom="10dp">
       	<TextView android:id="@+id/textValentin" style="@style/category"
       	      android:text="@string/valentine_s_day_category"
-	          android:background="@color/valentine"/>
+	          android:background="@color/valentine_alpha"/>
+      	</LinearLayout>
       	
+      	<LinearLayout android:layout_weight="1" android:background="@drawable/texture2" android:layout_marginBottom="10dp">
       	<TextView android:id="@+id/textBreakUp" style="@style/category"
       	   	  android:text="@string/break_up_category"
-	          android:background="@color/break_up"/>
+	          android:background="@color/break_up_alpha"/>
+      	</LinearLayout>
 	</LinearLayout>
 
 </LinearLayout>

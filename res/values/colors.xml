@@ -1,12 +1,7 @@
 <resources>
         <color name="birthday_alpha">#6080b3ff</color>
-        <color name="birthday">#6080b3ff</color>
         <color name="leaving_party_alpha">#60e5ff80</color>
-        <color name="leaving_party">#60e5ff80</color>
         <color name="wish_alpha">#60ffe680</color>
-        <color name="wish">#60ffe680</color>
         <color name="valentine_alpha">#60ffd5d5</color>
-        <color name="valentine">#60ffd5d5</color>
         <color name="break_up_alpha">#60dbe2e3</color>
-        <color name="break_up">#60dbe2e3</color>
 </resources>
