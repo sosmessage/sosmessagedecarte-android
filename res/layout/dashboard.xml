@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:background="#ccc"
-    android:orientation="vertical" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/page"
+	 android:background="@drawable/canvas">
     
 	<ImageView android:id="@+acountcreation/title" style="@style/logo"
 		android:src="@drawable/logo_dashboard" />
@@ -26,7 +25,7 @@
       	
       	<TextView android:id="@+id/textValentin" style="@style/category"
       	      android:text="@string/valentine_s_day_category"
-	          android:background="@color/valentine_s_day"/>
+	          android:background="@color/valentine"/>
       	
       	<TextView android:id="@+id/textBreakUp" style="@style/category"
       	   	  android:text="@string/break_up_category"

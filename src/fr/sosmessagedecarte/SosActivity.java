@@ -16,16 +16,24 @@ import org.json.JSONTokener;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public abstract class SosActivity extends Activity {
 
 	private static final String SERVER_URL = "http://sosmessage.arnk.fr";
 	private static final String ERROR_MESSAGE = "Ooops ! Il semblerait qu'il soit impossible de récuper des messages.\nPeut-être pourriez-vous réessayer plus tard.";
+	protected Typeface messageFont;
+
+	protected TextView message;
+	protected ImageView logo;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		messageFont = Typeface.createFromAsset(getAssets(), "fonts/Georgia.ttf");
 	}
 
 	protected void alert(String message) {
