@@ -45,9 +45,21 @@ public class DashboardActivity extends Activity {
 
 		TextView valentin = (TextView) findViewById(R.id.textValentin);
 		valentin.setTypeface(tf);
+		valentin.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent intent = new Intent(DashboardActivity.this, ValentineActivity.class);
+				startActivity(intent);
+			}
+		});
 
 		TextView rupture = (TextView) findViewById(R.id.textBreakUp);
 		rupture.setTypeface(tf);
+		rupture.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent intent = new Intent(DashboardActivity.this, BreakUpActivity.class);
+				startActivity(intent);
+			}
+		});
 
 	}
 }

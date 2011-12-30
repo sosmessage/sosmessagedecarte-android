@@ -23,6 +23,8 @@
         <activity android:name=".AnnivActivity" />
         <activity android:name=".MariageActivity" />
         <activity android:name=".VoeuxActivity" />
+        <activity android:name=".ValentineActivity" />
+        <activity android:name=".BreakUpActivity" />
     </application>
 
 </manifest>

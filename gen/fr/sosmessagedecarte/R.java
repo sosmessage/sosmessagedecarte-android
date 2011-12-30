@@ -30,28 +30,32 @@ public final class R {
         public static final int handmadepaper=0x7f020001;
         public static final int ic_launcher=0x7f020002;
         public static final int logo_anniv=0x7f020003;
-        public static final int logo_dashboard=0x7f020004;
-        public static final int logo_pot=0x7f020005;
-        public static final int logo_voeux=0x7f020006;
+        public static final int logo_break_up=0x7f020004;
+        public static final int logo_dashboard=0x7f020005;
+        public static final int logo_pot=0x7f020006;
+        public static final int logo_valentine=0x7f020007;
+        public static final int logo_voeux=0x7f020008;
     }
     public static final class id {
-        public static final int InnerRelativeLayout=0x7f070009;
+        public static final int InnerRelativeLayout=0x7f070004;
         public static final int logo=0x7f070001;
         public static final int myButton=0x7f070003;
         public static final int page=0x7f070000;
         public static final int text=0x7f070002;
-        public static final int textAnniv=0x7f070004;
-        public static final int textBreakUp=0x7f070008;
-        public static final int textPot=0x7f070005;
-        public static final int textValentin=0x7f070007;
-        public static final int textVoeux=0x7f070006;
+        public static final int textAnniv=0x7f070005;
+        public static final int textBreakUp=0x7f070009;
+        public static final int textPot=0x7f070006;
+        public static final int textValentin=0x7f070008;
+        public static final int textVoeux=0x7f070007;
     }
     public static final class layout {
         public static final int anniv=0x7f030000;
-        public static final int dashboard=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int pot=0x7f030003;
-        public static final int voeux=0x7f030004;
+        public static final int breakup=0x7f030001;
+        public static final int dashboard=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int pot=0x7f030004;
+        public static final int valentine=0x7f030005;
+        public static final int voeux=0x7f030006;
     }
     public static final class string {
         public static final int app_name=0x7f050000;
