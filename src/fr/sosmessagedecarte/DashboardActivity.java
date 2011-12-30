@@ -14,7 +14,7 @@ public class DashboardActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dashboard);
 
-		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Futura ld.ttf");
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Georgia.ttf");
 
 		TextView anniv = (TextView) findViewById(R.id.textAnniv);
 		anniv.setTypeface(tf);
