@@ -1,4 +1,4 @@
-package fr.sosmessagedecarte;
+package fr.sosmessage;
 
 import android.app.Activity;
 import android.content.Intent;

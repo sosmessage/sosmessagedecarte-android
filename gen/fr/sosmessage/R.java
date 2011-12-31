@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package fr.sosmessagedecarte;
+package fr.sosmessage;
 
 public final class R {
     public static final class acountcreation {

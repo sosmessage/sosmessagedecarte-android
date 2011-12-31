@@ -1,4 +1,4 @@
-package fr.sosmessagedecarte;
+package fr.sosmessage;
 
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;

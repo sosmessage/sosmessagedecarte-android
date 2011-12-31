@@ -1,4 +1,4 @@
-package fr.sosmessagedecarte;
+package fr.sosmessage;
 
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -7,17 +7,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class AnnivActivity extends SosActivity {
+public class ValentineActivity extends SosActivity {
 
-	private static final String CATEGORY = "4ef65b69e4b0fdb1a330261c";
+	private static final String CATEGORY = "4ef2330ee4b0bd586e6f56c2";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.anniv);
+		setContentView(R.layout.valentine);
 
 		logo = (ImageView) findViewById(R.id.logo);
-		logo.setImageResource(R.drawable.logo_anniv);
+		logo.setImageResource(R.drawable.logo_valentine);
 
 		message = (TextView) findViewById(R.id.text);
 		message.setMovementMethod(ScrollingMovementMethod.getInstance());

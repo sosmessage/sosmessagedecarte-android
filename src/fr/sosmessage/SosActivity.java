@@ -1,4 +1,4 @@
-package fr.sosmessagedecarte;
+package fr.sosmessage;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -9,6 +9,7 @@ import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.CoreProtocolPNames;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -23,7 +24,7 @@ import android.widget.TextView;
 
 public abstract class SosActivity extends Activity {
 
-	private static final String SERVER_URL = "http://sosmessage.arnk.fr";
+	private static final String SERVER_URL = "";
 	private static final String ERROR_MESSAGE = "Ooops ! Il semblerait qu'il soit impossible de récuper des messages.\nPeut-être pourriez-vous réessayer plus tard.";
 	protected Typeface messageFont;
 
@@ -49,7 +50,11 @@ public abstract class SosActivity extends Activity {
 	protected String getRandomMessage(String category) {
 		String url = String.format("%s/api/v1/categories/%s/message", SERVER_URL, category);
 		try {
-			HttpResponse response = new DefaultHttpClient().execute(new HttpGet(url));
+			DefaultHttpClient client = new DefaultHttpClient();
+			client.getParams()
+					.setParameter(CoreProtocolPNames.USER_AGENT, "SosMessageDeCarte user agent");
+
+			HttpResponse response = client.execute(new HttpGet(url));
 			StatusLine statusLine = response.getStatusLine();
 			if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
 				ByteArrayOutputStream out = new ByteArrayOutputStream();
