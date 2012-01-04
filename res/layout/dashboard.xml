@@ -39,6 +39,12 @@
       	   	  android:text="@string/break_up_category"
 	          android:background="@color/break_up_alpha"/>
       	</LinearLayout>
+      	
+      	<LinearLayout android:layout_weight="1" android:background="@drawable/texture2" android:layout_marginBottom="10dp">
+      	<TextView android:id="@+id/newMessage" style="@style/category"
+      	   	  android:text="@string/new_message"
+	          android:background="@color/break_up_alpha"/>
+      	</LinearLayout>
 	</LinearLayout>
 
 </LinearLayout>

@@ -61,5 +61,14 @@ public class DashboardActivity extends Activity {
 			}
 		});
 
+		TextView newMessage = (TextView) findViewById(R.id.newMessage);
+		newMessage.setTypeface(tf);
+		newMessage.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent intent = new Intent(DashboardActivity.this, NewMessageActivity.class);
+				startActivity(intent);
+			}
+		});
+
 	}
 }

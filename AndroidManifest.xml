@@ -25,6 +25,7 @@
         <activity android:name="fr.sosmessage.VoeuxActivity" />
         <activity android:name="fr.sosmessage.ValentineActivity" />
         <activity android:name="fr.sosmessage.BreakUpActivity" />
+        <activity android:name="fr.sosmessage.NewMessageActivity" />
     </application>
 
 </manifest>

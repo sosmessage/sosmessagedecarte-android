@@ -8,7 +8,7 @@
 		<ImageView android:id="@+id/logo" style="@style/logo"/>
 	 
 	 	<RelativeLayout android:id="@+id/InnerRelativeLayout">
-			<TextView android:id="@+id/text" style="@style/message"	/>
+			<TextView android:id="@+id/text" style="@style/message"/>
 			
 		    <Button android:id="@+id/myButton" style="@style/button"
 		        android:text="@string/button_text"/>

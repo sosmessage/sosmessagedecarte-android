@@ -10,5 +10,20 @@
     <string name="wish_category">de voeux</string>
     <string name="valentine_s_day_category">de saint-valentin</string>
     <string name="break_up_category">de rupture</string>
+    <string name="new_message">Proposer un message</string>
+    
+    <string name="category_prompt">Choisir une catégorie</string>
+    <string-array name="category_array">
+        <item>Anniversaire</item>
+        <item>Pot de départ</item>
+        <item>Voeux</item>
+        <item>Saint-Valentin</item>
+        <item>Rupture</item>
+    </string-array>
+    
+    <string name="message_prompt">Message</string>
+    <string name="pseudo_prompt">Pseudo (optionnel)</string>
+    <string name="pseudo_warning">Vous pouvez saisir un pseudo pour que les utilisateurs vous associe à ce message :</string>
+    
 
 </resources>
