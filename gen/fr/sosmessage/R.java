@@ -37,6 +37,7 @@ public final class R {
     }
     public static final class id {
         public static final int InnerRelativeLayout=0x7f080004;
+        public static final int cancel=0x7f080013;
         public static final int category=0x7f08000c;
         public static final int categoryLabel=0x7f08000b;
         public static final int logo=0x7f080001;

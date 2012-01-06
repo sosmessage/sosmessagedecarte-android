@@ -24,12 +24,23 @@ import android.widget.TextView;
 
 public abstract class SosActivity extends Activity {
 
+	public static String[] CATEGORIES = { "4ef65b69e4b0fdb1a330261c",// anniv
+			"4ebf92a4e4b0c140632178c1",// pot
+			"4ef22510e4b0bd586e6f569d", // voeux
+			"4ef2330ee4b0bd586e6f56c2", // saint valentin
+			"4ec0d549e4b05ecd78eeceb1", // rupture
+	};
 	private static final String SERVER_URL = "";
 	private static final String ERROR_MESSAGE = "Ooops ! Il semblerait qu'il soit impossible de récuper des messages.\nPeut-être pourriez-vous réessayer plus tard.";
-	protected Typeface messageFont;
 
+	protected Typeface messageFont;
 	protected TextView message;
 	protected ImageView logo;
+	protected DefaultHttpClient client = new DefaultHttpClient();
+
+	public SosActivity() {
+		client.getParams().setParameter(CoreProtocolPNames.USER_AGENT, "SosMessageDeCarte user agent");
+	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -50,10 +61,6 @@ public abstract class SosActivity extends Activity {
 	protected String getRandomMessage(String category) {
 		String url = String.format("%s/api/v1/categories/%s/message", SERVER_URL, category);
 		try {
-			DefaultHttpClient client = new DefaultHttpClient();
-			client.getParams()
-					.setParameter(CoreProtocolPNames.USER_AGENT, "SosMessageDeCarte user agent");
-
 			HttpResponse response = client.execute(new HttpGet(url));
 			StatusLine statusLine = response.getStatusLine();
 			if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
