@@ -1,4 +1,4 @@
-package fr.sosmessage;
+package fr.sosmessage.domain;
 
 public class Rating {
 

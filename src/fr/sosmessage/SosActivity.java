@@ -10,17 +10,19 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.CoreProtocolPNames;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONTokener;
+import org.codehaus.jackson.map.ObjectMapper;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import fr.sosmessage.domain.Message;
 
 public abstract class SosActivity extends Activity {
 
@@ -33,12 +35,17 @@ public abstract class SosActivity extends Activity {
 	private static final String SERVER_URL = "";
 	private static final String ERROR_MESSAGE = "Ooops ! Il semblerait qu'il soit impossible de récuper des messages.\nPeut-être pourriez-vous réessayer plus tard.";
 
-	protected Typeface messageFont;
-	protected TextView message;
+	protected String category;
+	private Typeface messageFont;
 	protected ImageView logo;
+	protected TextView messageView;
+	protected TextView pseudoView;
+	protected Button sosButton;
+
 	protected DefaultHttpClient client = new DefaultHttpClient();
 
-	public SosActivity() {
+	public SosActivity(String category) {
+		this.category = category;
 		client.getParams().setParameter(CoreProtocolPNames.USER_AGENT, "SosMessageDeCarte user agent");
 	}
 
@@ -46,6 +53,30 @@ public abstract class SosActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		messageFont = Typeface.createFromAsset(getAssets(), "fonts/Georgia.ttf");
+
+		logo = (ImageView) findViewById(R.id.logo);
+
+		messageView = (TextView) findViewById(R.id.text);
+		messageView.setMovementMethod(ScrollingMovementMethod.getInstance());
+		messageView.setTypeface(messageFont);
+
+		sosButton = (Button) findViewById(R.id.myButton);
+		sosButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				update();
+			}
+		});
+	}
+
+	protected void update() {
+		Message message = getRandomMessage(category);
+		messageView.setText(message.getText());
+		pseudoView = (TextView) findViewById(R.id.pseudo);
+		String pseudo = message.getContributorName();
+		if (pseudo != null && pseudo.length() != 0)
+			pseudoView.setText("—" + pseudo);
+		else
+			pseudoView.setText("");
 	}
 
 	protected void alert(String message) {
@@ -58,7 +89,7 @@ public abstract class SosActivity extends Activity {
 		alertDialog.show();
 	}
 
-	protected String getRandomMessage(String category) {
+	protected Message getRandomMessage(String category) {
 		String url = String.format("%s/api/v1/categories/%s/message", SERVER_URL, category);
 		try {
 			HttpResponse response = client.execute(new HttpGet(url));
@@ -67,20 +98,19 @@ public abstract class SosActivity extends Activity {
 				ByteArrayOutputStream out = new ByteArrayOutputStream();
 				response.getEntity().writeTo(out);
 				out.close();
-				JSONObject object = (JSONObject) new JSONTokener(out.toString()).nextValue();
-				return object.getString("text");
+				return new ObjectMapper().readValue(out.toString(), Message.class);
 			} else {
 				alert(ERROR_MESSAGE);
-				return "HTTP status code " + statusLine.getStatusCode();
+				return null;
 			}
 		} catch (ClientProtocolException e) {
 			alert(ERROR_MESSAGE);
-			return e.getMessage();
+			e.printStackTrace();
+			return null;
 		} catch (IOException e) {
 			alert(ERROR_MESSAGE);
-			return e.getMessage();
-		} catch (JSONException e) {
-			return e.getMessage();
+			e.printStackTrace();
+			return null;
 		}
 	}
 }
